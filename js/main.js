@@ -29,6 +29,7 @@ webix.ready(function () {
     {
       name: "formControl",
       $init: function (config) {
+        config.elements = [];
         const els = config.elements;
         const buttons = {
           cols: [
@@ -38,14 +39,22 @@ webix.ready(function () {
           ]
         };
         for (let field of config.fields) {
-          if (field === "one") els.push({ view: "text", label: "Fname" });
-          else if (field === "two") els.push({ view: "text", label: "Lname" });
-          else if (field === "three") els.push({ view: "text", label: "Addres" });
+          els.push({ view: "text", name: field });
         }
         els.push(buttons);
         this.$ready.push(function () {
-          if (config.saveAction) $$("save").attachEvent("onItemClick", config.saveAction);
-          if (config.cancelAction) $$("cancel").attachEvent("onItemClick", config.cancelAction);
+          const save = $$("save");
+          const cancel = $$("cancel");
+          if (config.saveAction) save.attachEvent("onItemClick", config.saveAction);
+          else
+            save.attachEvent("onItemClick", function () {
+              webix.message("Data save");
+            });
+          if (config.cancelAction) cancel.attachEvent("onItemClick", config.cancelAction);
+          else
+            cancel.attachEvent("onItemClick", () => {
+              this.clear();
+            });
         });
       }
     },
