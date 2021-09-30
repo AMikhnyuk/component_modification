@@ -1,0 +1,26 @@
+.modbutton0 .webix_button {
+  background: rgb(193, 253, 193);
+  border: 1px solid rgb(126, 250, 126);
+}
+.modbutton0 .webix_button:hover {
+  background: rgb(126, 250, 126);
+}
+.modbutton1 .webix_button {
+  background: rgb(233, 196, 196);
+  border: 1px solid rgb(228, 162, 162);
+}
+.modbutton1 .webix_button:hover {
+  background: rgb(228, 162, 162);
+}
+.modbutton2 .webix_button {
+  background: rgb(236, 255, 173);
+  border: 1px solid rgb(218, 251, 110);
+}
+.modbutton2 .webix_button:hover {
+  background: rgb(218, 251, 110);
+}
+.webix_el_modbutton .webix_button {
+  border-radius: 5px;
+  color: #475466;
+  font-weight: 400;
+}
