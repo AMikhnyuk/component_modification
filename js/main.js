@@ -43,8 +43,8 @@ webix.ready(function () {
         }
         els.push(buttons);
         this.$ready.push(function () {
-          const save = $$("save");
-          const cancel = $$("cancel");
+          const save = this.queryView({view:"button", value:"Save"});
+          const cancel = this.queryView({view:"button", value:"Cancel"});
           if (config.saveAction) save.attachEvent("onItemClick", config.saveAction);
           else
             save.attachEvent("onItemClick", function () {
