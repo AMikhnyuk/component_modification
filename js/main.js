@@ -33,9 +33,9 @@ webix.ready(function () {
         const els = config.elements;
         const buttons = {
           cols: [
-            { view: "button", value: "Cancel", width: 150, id: "cancel" },
+            { view: "button", value: "Cancel", width: 150 },
             {},
-            { view: "button", value: "Save", css: "webix_primary", width: 150, id: "save" }
+            { view: "button", value: "Save", css: "webix_primary", width: 150 }
           ]
         };
         for (let field of config.fields) {
