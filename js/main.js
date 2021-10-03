@@ -39,7 +39,7 @@ webix.ready(function () {
           ]
         };
         for (let field of config.fields) {
-          els.push({ view: "text", name: field });
+          els.push({ view: "text", name: field, label: field.toUpperCase() });
         }
         els.push(buttons);
         this.$ready.push(function () {
